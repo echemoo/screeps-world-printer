@@ -59,7 +59,7 @@ jobs:
     if: always()
     needs: [draw-shard0, draw-shard1, draw-shard2, draw-shard3]
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Get Date
         run: echo "ReleaseVersion=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d_%H-%M-%S')" >> $GITHUB_ENV
