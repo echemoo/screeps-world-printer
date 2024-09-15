@@ -32,7 +32,7 @@ runs:
       run: |
         npx ts-node example/drawOffical.ts --files --token=${{ inputs.screeps-token }} --shard=${{ inputs.shard-name }}
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: ${{ inputs.artifact-name }}
         path: .screeps-world-printer/dist
